@@ -45,19 +45,15 @@ public class VehicleService {
         Vehicle vehicle = vehicleRepository.findById(id)
                 .orElseThrow(() -> new AppException("Vehicle not found", HttpStatus.NOT_FOUND));
 
-        if (vehicleDto.getBrand() != null) {
-            vehicle.setBrand(vehicleDto.getBrand());
+        if (vehicleDto.getCustomerFio() != null) {
+            vehicle.setCustomerFio(vehicleDto.getCustomerFio());
         }
-        if (vehicleDto.getModel() != null) {
-            vehicle.setModel(vehicleDto.getModel());
+        if (vehicleDto.getCoachFio() != null) {
+            vehicle.setCoachFio(vehicleDto.getCoachFio());
         }
-        if (vehicleDto.getYear() != 0) {
-            vehicle.setYear(vehicleDto.getYear());
+        if (vehicleDto.getTime() != null) {
+            vehicle.setTime(vehicleDto.getTime());
         }
-        if (vehicleDto.getColor() != null) {
-            vehicle.setColor(vehicleDto.getColor());
-        }
-
         Vehicle savedVehicle = vehicleRepository.save(vehicle);
 
         return vehicleMapper.toVehicleDto(savedVehicle);

@@ -23,33 +23,33 @@ public class VehicleController {
 
     private final VehicleService vehicleService;
 
-    @GetMapping("/vehicles")
+    @GetMapping("/gymPosts")
     public ResponseEntity<List<VehicleDto>> allVehicles() {
         return ResponseEntity.ok(vehicleService.allVehicles());
     }
 
-    @PostMapping("/vehicles")
+    @PostMapping("/gymPosts")
     public ResponseEntity<VehicleDto> createVehicle(@Valid @RequestBody VehicleDto vehicleDto) {
         VehicleDto createdVehicle = vehicleService.createVehicle(vehicleDto);
-        return ResponseEntity.created(URI.create("/vehicles/" + vehicleDto.getId())).body(createdVehicle);
+        return ResponseEntity.created(URI.create("/gymPosts/" + vehicleDto.getId())).body(createdVehicle);
     }
 
-    @GetMapping("/vehicles/{id}")
+    @GetMapping("/gymPosts/{id}")
     public ResponseEntity<VehicleDto> getVehicle(@PathVariable Long id) {
         return ResponseEntity.ok(vehicleService.getVehicle(id));
     }
 
-    @PutMapping("/vehicles/{id}")
+    @PutMapping("/gymPosts/{id}")
     public ResponseEntity<VehicleDto> updateVehicle(@PathVariable Long id, @Valid @RequestBody VehicleDto vehicleDto) {
         return ResponseEntity.ok(vehicleService.updateVehicle(id, vehicleDto));
     }
 
-    @PatchMapping("/vehicles/{id}")
+    @PatchMapping("/gymPosts/{id}")
     public ResponseEntity<VehicleDto> patchVehicle(@PathVariable Long id, @RequestBody VehicleDto vehicleDto) {
         return ResponseEntity.ok(vehicleService.patchVehicle(id, vehicleDto));
     }
 
-    @DeleteMapping("/vehicles/{id}")
+    @DeleteMapping("/gymPosts/{id}")
     public ResponseEntity<VehicleDto> deleteVehicle(@PathVariable Long id) {
         return ResponseEntity.ok(vehicleService.deleteVehicle(id));
     }

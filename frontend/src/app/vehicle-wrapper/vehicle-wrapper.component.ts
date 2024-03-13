@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
  import { CommonModule } from '@angular/common';
 
-import { VehicleDisplayComponent } from './../vehicle-display/vehicle-display.component';
-import { VehicleEditComponent } from './../vehicle-edit/vehicle-edit.component';
+import { VehicleDisplayComponent } from '../vehicle-display/vehicle-display.component';
+import { VehicleEditComponent } from '../vehicle-edit/vehicle-edit.component';
 
-import {Vehicle} from './../vehicle';
+import {Vehicle} from '../vehicle';
 
 @Component({
   selector: 'app-vehicle-wrapper',
@@ -15,7 +15,7 @@ import {Vehicle} from './../vehicle';
 })
 export class VehicleWrapperComponent {
 
-  @Input() vehicle: Vehicle = new Vehicle(0, "", "", 0, "");
+  @Input() vehicle: Vehicle = new Vehicle(0, "", "", "");
   @Output() removeItemEvent = new EventEmitter();
   editable: boolean = false;
 

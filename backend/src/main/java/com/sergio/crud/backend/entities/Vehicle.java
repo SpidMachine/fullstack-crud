@@ -28,14 +28,12 @@ public class Vehicle {
     private Long id;
 
     @Column
-    private String brand;
+    private String customerFio;
 
     @Column
-    private String model;
+    private String coachFio;
 
     @Column
-    private String color;
+    private String time;
 
-    @Column
-    private int year;
 }

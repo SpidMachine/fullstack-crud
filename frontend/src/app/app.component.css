@@ -1,5 +1,11 @@
 .main {
   padding: 20px;
   margin: auto;
-  width: 50%;
+  width: 80%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }

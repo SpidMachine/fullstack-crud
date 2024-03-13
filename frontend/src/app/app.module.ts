@@ -8,20 +8,22 @@ import { VehicleInputComponent } from './vehicle-input/vehicle-input.component';
 import { VehicleDisplayComponent } from './vehicle-display/vehicle-display.component';
 import { VehicleEditComponent } from './vehicle-edit/vehicle-edit.component';
 import { VehicleWrapperComponent } from './vehicle-wrapper/vehicle-wrapper.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    VehicleInputComponent,
-    VehicleDisplayComponent,
-    VehicleEditComponent,
-    VehicleWrapperComponent,
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        VehicleInputComponent,
+        VehicleDisplayComponent,
+        VehicleEditComponent,
+        VehicleWrapperComponent,
+        MatGridListModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

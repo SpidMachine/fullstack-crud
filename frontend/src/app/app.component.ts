@@ -16,7 +16,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.http.get<Vehicle[]>(
-      "http://localhost:8080/vehicles"
+      "http://localhost:8080/gymPosts"
     ).subscribe(data => this.vehicles = data);
   }
 
@@ -26,7 +26,7 @@ export class AppComponent {
 
   removeItem(vehicleId: number): void {
     this.http.delete(
-      "http://localhost:8080/vehicles/" + vehicleId,
+      "http://localhost:8080/gymPosts/" + vehicleId,
     ).subscribe(data => this.vehicles = this.vehicles.filter((vehicle: Vehicle) => vehicle.id != vehicleId));
   }
 

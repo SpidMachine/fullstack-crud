@@ -3,17 +3,18 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 
 import {Vehicle} from './../vehicle';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @Component({
   selector: 'app-vehicle-display',
   templateUrl: './vehicle-display.component.html',
   styleUrls: ['./vehicle-display.component.css'],
   standalone: true,
-  imports: [MatCardModule, MatButtonModule],
+  imports: [MatCardModule, MatButtonModule, MatGridListModule],
 })
 export class VehicleDisplayComponent {
 
-  @Input() vehicle: Vehicle = new Vehicle(0, "", "", 0, "");
+  @Input() vehicle: Vehicle = new Vehicle(0, "", "", "");
 
   @Output() removeItemEvent = new EventEmitter();
   @Output() editItemEvent = new EventEmitter();

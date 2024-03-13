@@ -39,7 +39,7 @@ export class VehicleInputComponent {
 
   onSubmit(): void {
     this.http.post<Vehicle>(
-      "http://localhost:8080/vehicles",
+      "http://localhost:8080/gymPosts",
       this.vehicleForm.value
     ).subscribe(data => {
       this.newDataEvent.emit(data);

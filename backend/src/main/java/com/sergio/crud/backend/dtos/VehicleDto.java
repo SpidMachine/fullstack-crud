@@ -19,15 +19,12 @@ public class VehicleDto {
     private Long id;
 
     @NotNull
-    private String brand;
+    private String customerFio;
 
     @NotNull
-    private String model;
+    private String coachFio;
 
     @NotNull
-    private String color;
-
-    @NotNull
-    private int year;
+    private String time;
 
 }
